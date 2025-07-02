@@ -3,16 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DEMOMVC.Controllers
 {
-    public class PersonController : Controller
+    public class personController : Controller
     {
-        [HttpGet]
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Index(PersonModel ps)
+        public ActionResult Index(Person ps)
         {
             string strOutput = ps.PersonID + "-" + ps.FullName + "-" + ps.Address;
             ViewBag.inforPerson = strOutput;

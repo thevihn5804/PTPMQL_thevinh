@@ -36,8 +36,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/PTPMQL/DEMOMVC/Views/Person/index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXGluZGV4LmNzaHRtbA==
+[E:/PTPMQL/DEMOMVC/Views/Person/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/PTPMQL/DEMOMVC/Views/Shared/Error.cshtml]
