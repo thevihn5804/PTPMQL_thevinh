@@ -1,11 +1,37 @@
-<h2>Nhập thông tin Person</h2>
-<form asp-action="Index">
-    <label>Nhập PersonID</label>
-    <input type="text" name="PersonID" placeholder="ID của bạn là gì?">
-    <label>Nhập họ tên:</label>
-    <input type="text" name="FullName" placeholder="Bạn tên là gì?">
-    <label>Nhập địa chỉ:</label>
-    <input type="text" name="Address" placeholder="Bạn đến từ đâu?">
-    <input type="submit" value="Gửi dữ liệu">
-</form>
-<h1>@ViewBag.inforPerson</h1>
+  @model IEnumerable<DEMOMVC.Models.Person>
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Index</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+<thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+@foreach(var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            <a asp-action="Edit" asp-route-id="@item.PersonID">Edit</a>
+            <a asp-action="Delete" asp-route-id="@item.PersonID">Delete</a>
+        </td>
+    </tr>
+}
+</tbody>
+</table>

@@ -18,7 +18,8 @@ public class HomeController : Controller
         return View();
     }
 
-    [HttpPost]
+    [HttpPost] // sử dụng để chỉ định phương thức sẽ nhận dữ liệu từ View gửi lên.
+
         public IActionResult Index(string FullName, string Address)
         {
         string strOutput = "Xin chao" + FullName + "Den tu" + Address;
