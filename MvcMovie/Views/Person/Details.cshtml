@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Person Details";
+}
+<h2>Person Details</h2>
+<p>Đây là trang chi tiết Person.</p>
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">PersonId</dt>
+        <dd class="col-sm-10">@Model.PersonId</dd>
+        <dt class="col-sm-2">FullName</dt>
+        <dd class="col-sm-10">@Model.FullName</dd>
+        <dt class="col-sm-2">Address</dt>
+        <dd class="col-sm-10">@Model.Address</dd>
+        <dt class="col-sm-2">Email</dt>
+        <dd class="col-sm-10">@Model.Email</dd>
+    </dl>
+</div>
