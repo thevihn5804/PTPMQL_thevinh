@@ -363,3 +363,15 @@ E:\PTPMQL\MvcMovie\obj\Debug\net9.0\refint\MvcMovie.dll
 E:\PTPMQL\MvcMovie\obj\Debug\net9.0\MvcMovie.pdb
 E:\PTPMQL\MvcMovie\obj\Debug\net9.0\MvcMovie.genruntimeconfig.cache
 E:\PTPMQL\MvcMovie\obj\Debug\net9.0\ref\MvcMovie.dll
+E:\PTPMQL\MvcMovie\bin\Debug\net9.0\EPPlus.dll
+E:\PTPMQL\MvcMovie\bin\Debug\net9.0\EPPlus.Interfaces.dll
+E:\PTPMQL\MvcMovie\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+E:\PTPMQL\MvcMovie\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+E:\PTPMQL\MvcMovie\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
+E:\PTPMQL\MvcMovie\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\PTPMQL\MvcMovie\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+E:\PTPMQL\MvcMovie\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
+E:\PTPMQL\MvcMovie\bin\Debug\net9.0\Microsoft.IO.RecyclableMemoryStream.dll
+E:\PTPMQL\MvcMovie\bin\Debug\net9.0\System.Security.Cryptography.Pkcs.dll
+E:\PTPMQL\MvcMovie\bin\Debug\net9.0\System.Security.Cryptography.Xml.dll
+E:\PTPMQL\MvcMovie\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll

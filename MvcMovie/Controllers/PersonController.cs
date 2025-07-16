@@ -1,14 +1,21 @@
+using System.Reflection.PortableExecutable;
+using System.Net;
+using System;
+using System.IO;
 using System.Net.Mime;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MvcMovie.Data;
 using MvcMovie.Models;
 
+
 namespace MvcMovie.Controllers
 {
     public class PersonController : Controller
     {
         private readonly ApplicationDbContext _context;
+        // Nếu có class ExcelProcess thì bỏ comment dòng dưới, nếu không thì cần tạo class này
+        // private ExcelProcess _excelProcess = new ExcelProcess();
         public PersonController(ApplicationDbContext context)
         {
             _context = context;
@@ -120,6 +127,52 @@ namespace MvcMovie.Controllers
         private bool PersonExists(string id)
         {
             return (_context.Person?.Any(e => e.PersonId == id)).GetValueOrDefault();
+        }
+
+        public async Task<IActionResult> Upload()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> Upload(IFormFile file)
+        {
+            if (file != null)
+            {
+                string fileExtension = Path.GetExtension(file.FileName);
+                if (fileExtension != ".xls" && fileExtension != ".xlsx")
+                {
+                    ModelState.AddModelError("", "Please choose excel file to upload!");
+                }
+                else
+                {
+                    // Sửa lại logic lưu file và đọc dữ liệu
+                    var fileName = DateTime.Now.ToString("yyyyMMddHHmmss") + fileExtension;
+                    var uploadPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Uploads", "Excels");
+                    if (!Directory.Exists(uploadPath)) Directory.CreateDirectory(uploadPath);
+                    var filePath = Path.Combine(uploadPath, fileName);
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await file.CopyToAsync(stream);
+                    }
+                    // Nếu có ExcelProcess thì bỏ comment đoạn dưới
+                    /*
+                    var dt = _excelProcess.ExcelToDataTable(filePath);
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        var ps = new Person();
+                        ps.PersonId = dt.Rows[i][0].ToString();
+                        ps.FullName = dt.Rows[i][1].ToString();
+                        ps.Address = dt.Rows[i][2].ToString();
+                        _context.Add(ps);
+                    }
+                    await _context.SaveChangesAsync();
+                    */
+                    return RedirectToAction(nameof(Index));
+                }
+            }
+            return View();
         }
     }
 }    

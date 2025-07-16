@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\MvcMovie - Sao chép\\MvcMovie.csproj": {}
+    "E:\\PTPMQL\\MvcMovie\\MvcMovie.csproj": {}
   },
   "projects": {
-    "E:\\MvcMovie - Sao chép\\MvcMovie.csproj": {
+    "E:\\PTPMQL\\MvcMovie\\MvcMovie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MvcMovie - Sao chép\\MvcMovie.csproj",
+        "projectUniqueName": "E:\\PTPMQL\\MvcMovie\\MvcMovie.csproj",
         "projectName": "MvcMovie",
-        "projectPath": "E:\\MvcMovie - Sao chép\\MvcMovie.csproj",
+        "projectPath": "E:\\PTPMQL\\MvcMovie\\MvcMovie.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "E:\\MvcMovie - Sao chép\\obj\\",
+        "outputPath": "E:\\PTPMQL\\MvcMovie\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -44,6 +44,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
